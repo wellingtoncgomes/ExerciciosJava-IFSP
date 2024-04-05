@@ -1,0 +1,30 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		List<String> listaCompra;
+
+		listaCompra = new ArrayList<String>();
+
+		listaCompra.add("Arroz");
+		listaCompra.add("Feijão");
+		listaCompra.add("Macarrão");
+		listaCompra.add("Leite");
+		listaCompra.add("Café");
+		System.out.println("------Imprimindo lista compra ------");
+		for (String elemento :listaCompra) {
+			System.out.println(elemento);
+		}
+		System.out.println("------Removendo um item ------");
+		listaCompra.remove("Leite");
+		System.out.println("------Imprimindo lista compra com item removido ------");
+		for (String elemento :listaCompra) {
+			System.out.println(elemento);
+		}
+	}
+
+}

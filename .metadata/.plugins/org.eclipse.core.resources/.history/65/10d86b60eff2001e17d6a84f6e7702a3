@@ -1,0 +1,24 @@
+package exercicio7;
+
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+        Agenda agenda = new Agenda();
+
+      
+        agenda.adicionarCompromisso(new Compromisso("2024-04-05", "10:00", "Reunião de equipe"));
+        agenda.adicionarCompromisso(new Compromisso("2024-04-05", "15:00", "Entrevista de emprego"));
+        agenda.adicionarCompromisso(new Compromisso("2024-04-06", "13:30", "Almoço com cliente"));
+
+        
+        List<Compromisso> compromissosNoDia = agenda.getCompromissosPorData("2024-04-05");
+        System.out.println("Compromissos para 2024-04-05:");
+        for (Compromisso compromisso : compromissosNoDia) {
+            System.out.println(compromisso);
+        }
+    }
+
+}

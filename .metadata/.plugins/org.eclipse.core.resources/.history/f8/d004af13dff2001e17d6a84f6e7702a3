@@ -1,0 +1,5 @@
+package interfaceConceito;
+
+public interface DispositivoEletronico {
+
+}

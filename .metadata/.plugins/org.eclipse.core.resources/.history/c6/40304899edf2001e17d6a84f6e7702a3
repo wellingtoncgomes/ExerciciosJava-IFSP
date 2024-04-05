@@ -1,0 +1,25 @@
+package exercicio6;
+import exercicio6.SaldoInsuficienteException;
+import exercicio6.ContaBancaria;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		   ContaBancaria conta = new ContaBancaria(12345, 0);
+
+	        conta.depositar(1000);
+	        conta.verSaldo();
+
+	        conta.sacar(500);
+	        conta.verSaldo();
+
+	        try {
+	            conta.sacar(2000); 
+	            conta.verSaldo();
+	        } catch (SaldoInsuficienteException e) {
+	            System.out.println("Erro: " + e.getMessage());
+	        }
+	}
+
+}

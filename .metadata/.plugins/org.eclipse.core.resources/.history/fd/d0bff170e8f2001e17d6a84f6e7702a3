@@ -1,0 +1,33 @@
+package exercicio4;
+
+public class ContaBancaria {
+	private int numeroDaConta;
+	private double saldo;
+
+	
+	public ContaBancaria(int numeroDaConta, double saldoInicial) {
+		this.numeroDaConta = numeroDaConta;
+		this.saldo = saldoInicial;
+	}
+
+	public void depositar(double valor) {
+		this.saldo += valor;
+		System.out.println("Depósito de " + valor + " realizado com sucesso.");
+	}
+
+
+	public void sacar(double valor) {
+		if (this.saldo >= valor) {
+			this.saldo -= valor;
+			System.out.println("Saque de " + valor + " realizado com sucesso.");
+		} else {
+			System.out.println("Saldo insuficiente para realizar saque.");
+		}
+	}
+
+
+	public void verSaldo() {
+		System.out.println("Saldo atual da conta " + this.numeroDaConta + ": " + this.saldo);
+	}
+
+}
